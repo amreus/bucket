@@ -1,0 +1,27 @@
+{
+    "version": "0.1.3",
+    "description": "Fake English word generator for Go and CLI",
+    "homepage": "https://github.com/nwtgck/go-fakelish",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/nwtgck/go-fakelish/releases/download/v0.1.3/fakelish-windows-amd64.zip",
+            "hash": "",
+            "extract_dir": "fakelish-windows-amd64"
+        }
+
+    },
+    "pre_install": "Rename-Item -Path \"$dir\\fakelish\" fakelish.exe",
+    "bin": "fakelish.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/nwtgck/go-fakelish/releases/download/v$version/fakelish-windows-amd64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/go-fakelish_$version_checksums.txt"
+        }
+    }
+}

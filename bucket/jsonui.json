@@ -1,0 +1,22 @@
+{
+    "version": "1.0.1",
+    "description": "Fake English word generator for Go and CLI",
+    "homepage": "https://github.com/gulyasm/jsonui",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/gulyasm/jsonui/releases/download/v1.0.1/jsonui_windows_amd64.exe",
+            "hash": ""
+        }
+
+    },
+    "bin": [["jsonui_windows_amd64.exe", "jsonui"]],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/gulyasm/jsonui/releases/download/v$version/jsonui_windows_amd64.exe"
+            }
+        }
+    }
+}

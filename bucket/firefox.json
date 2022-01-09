@@ -1,0 +1,79 @@
+{
+    "version": "95.0.2",
+    "description": "Popular open source web browser.",
+    "homepage": "https://www.mozilla.org/firefox/",
+    "license": "MPL-2.0",
+    "notes": [
+        "Register Firefox as a default browser by running:",
+        "reg import \"$dir\\register-as-default.reg\"",
+        "Open the Default Apps Settings by running:",
+        "control /name Microsoft.DefaultPrograms /page pageDefaultProgram"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://archive.mozilla.org/pub/firefox/releases/95.0.2/win64/en-US/Firefox%20Setup%2095.0.2.exe#/dl.7z",
+            "hash": "sha512:c49400f7df5c353cd1d1e419cbc92b5c3fdb2e8ba5e041bac735502f9286a3b8fb9da5a7e30e6c6ebb22b999a1f0f1a24447713aea18ae025698b9a70a22f556"
+        },
+        "32bit": {
+            "url": "https://archive.mozilla.org/pub/firefox/releases/95.0.2/win32/en-US/Firefox%20Setup%2095.0.2.exe#/dl.7z",
+            "hash": "sha512:04934f31e1c2cca58ddf8e503d8e663f83d54bf15eedcdd00164a18a3e283620e4b590fdd872fd0d33475dda35fbc2cebd4b8250f389ab41c189de8f420a7f63"
+        }
+    },
+    "extract_dir": "core",
+    "bin": [
+        [
+            "firefox.exe",
+            "firefox",
+            "-profile \"$dir\\profile\""
+        ]
+    ],
+    "shortcuts": [
+        [
+            "firefox.exe",
+            "Firefox",
+            "-profile \"$dir\\profile\""
+        ]
+    ],
+    "post_install": [
+        "$dirpath = \"$dir\".Replace('\\', '\\\\')",
+        "$exepath = \"$scoopdir\\shims\\$app.exe\".Replace('\\', '\\\\')",
+        "'register-as-default' | ForEach-Object {",
+        "  if (Test-Path \"$bucketsdir\\amreus\\scripts\\$app\\$_.reg\") {",
+        "    $content = Get-Content \"$bucketsdir\\amreus\\scripts\\$app\\$_.reg\"",
+        "    $content = $content.Replace('$dirpath', $dirpath)",
+        "    $content = $content.Replace('$exepath', $exepath)",
+        "    if ($global) {",
+        "      $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE')",
+        "    }",
+        "    $content | Set-Content -Path \"$dir\\$_.reg\"",
+        "  }",
+        "}"
+    ],
+    "persist": [
+        "distribution",
+        "profile"
+    ],
+    "checkver": {
+        "url": "https://archive.mozilla.org/pub/firefox/candidates/",
+        "regex": "pub/firefox/candidates/([\\d.]+)-candidates",
+        "reverse": true
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://archive.mozilla.org/pub/firefox/releases/$version/win64/en-US/Firefox%20Setup%20$version.exe#/dl.7z",
+                "hash": {
+                    "url": "https://archive.mozilla.org/pub/firefox/releases/$version/SHA512SUMS",
+                    "regex": "$sha512\\s+win64/en-US/$basename"
+                }
+            },
+            "32bit": {
+                "url": "https://archive.mozilla.org/pub/firefox/releases/$version/win32/en-US/Firefox%20Setup%20$version.exe#/dl.7z",
+                "hash": {
+                    "url": "https://archive.mozilla.org/pub/firefox/releases/$version/SHA512SUMS",
+                    "regex": "$sha512\\s+win32/en-US/$basename"
+                }
+            }
+        }
+    }
+}
