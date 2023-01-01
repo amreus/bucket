@@ -1,16 +1,16 @@
 {
     "version": "0.0.14",
     "description": "A custom desktop browser for TiddlyWiki 5 and TiddlyWiki Classic",
-    "homepage": "https://github.com/Jermolene/TiddlyDesktop",
+    "homepage": "https://github.com/TiddlyWiki/TiddlyDesktop",
     "license": "Unknown",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Jermolene/TiddlyDesktop/releases/download/v0.0.14/tiddlydesktop-win64-v0.0.14.zip",
+            "url": "https://github.com/TiddlyWiki/TiddlyDesktop/releases/download/v0.0.14/tiddlydesktop-win64-v0.0.14.zip",
             "hash": "32547c47c25d28050b5a9f872b974963af9c73e2e993b12f56e5ef19aa2dfffb",
             "extract_dir": "TiddlyDesktop-win64-v0.0.14"
         },
         "32bit": {
-            "url": "https://github.com/Jermolene/TiddlyDesktop/releases/download/v0.0.14/tiddlydesktop-win32-v0.0.14.zip",
+            "url": "https://github.com/TiddlyWiki/TiddlyDesktop/releases/download/v0.0.14/tiddlydesktop-win32-v0.0.14.zip",
             "hash": "dd7434ce30e5bb774affb1be5f0dac4d53e41f72a6e81fece470d06c08fc6fa8",
             "extract_dir": "TiddlyDesktop-win32-v0.0.14"
         }
@@ -33,11 +33,11 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Jermolene/TiddlyDesktop/releases/download/v0.0.14/tiddlydesktop-win64-v$version.zip",
+                "url": "https://github.com/TiddlyWiki/TiddlyDesktop/releases/download/v0.0.14/tiddlydesktop-win64-v$version.zip",
                 "extract_dir": "TiddlyDesktop-win64-v$version"
             },
             "32bit": {
-                "url": "https://github.com/Jermolene/TiddlyDesktop/releases/download/v0.0.14/tiddlydesktop-win32-v$version.zip",
+                "url": "https://github.com/TiddlyWiki/TiddlyDesktop/releases/download/v0.0.14/tiddlydesktop-win32-v$version.zip",
                 "extract_dir": "TiddlyDesktop-win32-v$version"
             }
         }
