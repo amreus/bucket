@@ -1,6 +1,6 @@
 {
     "version": "1.0.1",
-    "description": "Fake English word generator for Go and CLI",
+    "description": "An interactive, command line JSON explorer. (archived)",
     "homepage": "https://github.com/gulyasm/jsonui",
     "license": "MIT",
     "architecture": {
