@@ -10,7 +10,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/jftuga/fpp/releases/download/v1.1.0/fpp_1.1.0_windows_amd64.zip",
-            "bin": ["dave.exe","davecli.exe"]
+            "bin": "fpp.exe"
         }
     },
     "checkver": "github",
