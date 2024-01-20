@@ -1,3 +1,5 @@
+| app | desc |
+| --- | --- |
 | dave | [unmaintained] A totally simple and very easy to configure stand alone webdav server |
 | fpp | Find Program Path: iterate through the PATH environment variable to search for the given programs |
 | go-fakelish | Fake English word generator for Go and CLI |
