@@ -8,7 +8,7 @@ scoop bucket add amreus https://github.com/amreus/bucket
 scoop bucket rm amreus
 ```
 
-See (app-list)[./app-list.md]
+See [app-list](./app-list.md)
 
 #### Links
 
