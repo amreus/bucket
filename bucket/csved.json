@@ -1,0 +1,21 @@
+{
+    "version": "2.5.7",
+    "description": "CSVed is an easy and powerful CSV file editor, you can manipulate any CSV file, separated with any separator.",
+    "homepage": "https://home.hccnet.nl/s.j.francke/csved/index.html",
+    "license": "cardware",
+    "url": "http://home.hccnet.nl/s.j.francke/csved/CSVed.zip",
+    "bin": "csved.exe",
+    "shortcuts": [
+        [
+            "csved.exe",
+            "CSVed"
+        ]
+    ],
+    "hash": "41f25c868048f4fd20166dd2cdd3df1e072817f38bd1ca2ab00cca4b4a73a991",
+    "checkver": {
+        "regex": "CSVed ([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "http://home.hccnet.nl/s.j.francke/csved/CSVed.zip"
+    }
+}
