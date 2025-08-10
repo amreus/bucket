@@ -1,22 +1,22 @@
 {
-    "version": "5.7.3",
+    "version": "5.8.0",
     "description": "Simple Go WebAV server",
     "homepage": "https://github.com/hacdias/webdav",
     "license": {
         "identifier": "MIT",
         "url": "https://github.com/hacdias/webdav/blob/main/LICENSE"
     },
-    "changelog": "https://github.com/hacdias/webdav/releases/tag/v5.7.3",
+    "changelog": "https://github.com/hacdias/webdav/releases/tag/v5.8.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/hacdias/webdav/releases/download/v5.7.3/windows-amd64-webdav.zip",
+            "url": "https://github.com/hacdias/webdav/releases/download/v5.8.0/windows-amd64-webdav.zip",
             "bin": "webdav.exe",
-            "hash": "7582be0bd86fca76bc910250309fae67b52d60a712633cf82ded968e8b8aeead"
+            "hash": "118b5134d0966d5e79e916630c2d5b87ecd23755e14257ef4228ebcca31169c9"
         },
         "32bit": {
-            "url": "https://github.com/hacdias/webdav/releases/download/v5.7.3/windows-386-webdav.zip",
+            "url": "https://github.com/hacdias/webdav/releases/download/v5.8.0/windows-386-webdav.zip",
             "bin": "webdav.exe",
-            "hash": "5b5085360c28188db5fcc948b02ec6a40b370fcbecf91928cf021054ddbca760"
+            "hash": "95ff6a4dc9a26a705d8ddceda48f2cd354ea3f3ca76684338e272c97b2068ea5"
         }
     },
     "checkver": "github",
